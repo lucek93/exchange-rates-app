@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    max-height: 100vh;
+}
+
+/* Container  */
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, #e0cccc 0%, #f80e06 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Currency App */
+
+.currency-app {
+    background-color: #FF4841;
+    color: #FFF;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 8px 8px 15px #BAB8B3;
+    max-height: 85vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.currency-app::-webkit-scrollbar {
+    display: none;
+}
+
+/* Currency List - left column */
+
+.currency-list {
+    margin: 0 auto;
+}
+
+.currency-list h2 {
+    letter-spacing: 1px;
+}
+
+.base-currency img {
+    margin-left: 20px;
+}
+
+.currency-list .rate {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    transform: 0;
+    transition: 0.3s;
+}
+
+img {
+    width: 32px;
+    height: 20px;
+    border: 1px solid #fff;
+}
+
+.currency-list .rate-data {
+    width: 40%;
+    font-size: 1.5rem;
+    margin: 2px 0;
+}
+
+.currency-list .rate:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(-5%);
+}
+
+.currency-list .rate-value-span {
+    font-style: italic;
+}
+
+.clicked {
+    background-color: #FFF !important;
+    border: 1px solid #f80e06 !important;
+    color: #f80e06;
+}
+
+.currency-span {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Historical rates - right column */
+
+.historical-rates h2 {
+    letter-spacing: 1px;
+}
+
+.historical-rates-list {
+    font-size: 1.6rem;
+}
+
+.historical-rate {
+    margin: 0 auto;
+}
+
+.historical-rate h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.historical-rate .date {
+    margin: 20px 0;
+}
+
+.historical-rate img {
+    margin-left: 20px;
+}
+
+.historical-rate table {
+    width: 80%;
+    margin: 20px auto;
+    color: #FFF;
+
+}
+
+/* Media Queries */
+
+@media (min-width: 577px) {
+    .scroll {
+        position: absolute;
+        top: 88%;
+        left: 50%;
+        animation: move .8s ease-in alternate infinite;
+        transform: translateY(0);
+    }
+
+    .scroll i {
+        font-size: 3rem;
+        color: #FFF;
+    }
+
+    @keyframes move {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(10px);
+        }
+    }
+
+}
