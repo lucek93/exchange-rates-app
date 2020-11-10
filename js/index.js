@@ -53,7 +53,7 @@ function getLatestRates() {
         .then(function (data) {
             var latestRatesData = data.rates;
 
-            for (const [key, value] of Object.entries(latestRatesData)) {
+            for (var [key, value] of Object.entries(latestRatesData)) {
                 if (key !== "PLN") {
                     renderCurrencyList(key, value);
                 }
@@ -67,7 +67,7 @@ function getLatestRates() {
 
 // Render Currency List on left side of page
 var renderCurrencyList = function (key, value) {
-    const markup = `
+    var markup = `
     <div class="rate">
     <p class="rate-data" id=${key}><span class="currency-span">Currency: ${key}</span> 
     Rate: <span class="rate-value-span">${value}</span></p>
